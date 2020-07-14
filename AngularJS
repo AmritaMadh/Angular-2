@@ -47,4 +47,14 @@ Set Up
  13. tsconfig.json - consist of default typescript configuration for project in the workspace.
  14. tsconfig.spec.json file - consist of all the configuartion for typescript for application tests.
  15. tslint.json - this is an application specific T eslint configuration.
+ 
+5. ng serve 
+ error - port 4200 already in use then -
+         run netstat -a -o -n 
+         find port 4200 check for process id PID eg..3680
+         run taskkill /F /PID 3680 
+         this will terminate the process with 3680 id.
+         
+         
+  
     

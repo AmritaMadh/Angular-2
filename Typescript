@@ -1,0 +1,5 @@
+npm install -g typescript
+tsc --version 
+code example11.ts  - create ts file
+tsc example11.ts  - compile
+node example11.js  -  execute

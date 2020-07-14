@@ -1,0 +1,50 @@
+Angular JS is an Open source front-end Javascript framwework for creating Single Page Applications, developed by Google in 2002.
+Drawbacks:
+  - Angular JS has Large Bundle Size
+  - It has a lot of performance issues and
+  - Did not Support Mobile Device
+  
+  
+ Angular is an open source web based application based on TypeScript.
+ Typescript is a programming language developed by Microsoft, its a superset of javascript, with typescript Angular introduced and object-oriented programming paradigm into web development.
+ 
+Diffrence:
+
+The Architecture of Angular Application is different from Angular JS. 
+The main building block of Angular are: modules, components, template metadata, data binding, directives, services and dependency injection.
+Angular doesnt have a concept of scope and controller instead it makes use of a hierarchy of components.
+Desktop development are much easier when mobile performances are handled first, thus Angular first handle mobile development.
+Angular follows modularity - similar functionalities are kept together in same modules.
+With typescript Angular has installed classed-based object-oriented programming and static typing into website creation
+
+
+Set Up
+1. install VC
+2. install Node js -  the reason to install Node js is that all web browsers such as chrome, firefox etc understandony javascript. All the code that we write in typescript must be transpired to javascript
+   The typescript transpiler requires no chair for generating the typescript code to javascript.
+3. install Angular CLI - command line interface
+    npm install -g @angular/cli
+    Angular cli is a tool that is used to initialze, develope and maintain the application
+4. create new project
+    ng new Sample-Project
+    to open the project in Visual Code - 
+    code . enter
+ 
+ The project contain number of files created by Angular.
+ 1. e2e folder - contains a source of files to perform set of end to end test that correspond to root level application along with test specific configuration files.
+ 2. node_module folder - provides set of npm packages for entier workspace. 
+ 3. src - contains all the root level application source files that are required for the application development
+ 4. edit config folder - specifies the configuration for the code editors
+ 5. gitignore folder - specifies the intentionally untracked files that should be ignored by git.
+ 6. angular.json folder - all the cli configuration defaults for all projects in the workspace including configuration options for build serve and test tools that the cli uses 
+    such as the eslint karma and protractor. 
+ 7. browserlist folder - configures sharing of target browsers and node js versions among various front nd tools.
+ 8. karma.js - consist of application-specific karma configuration. karma is a test runner for javascript applications.
+ 9. package-locked.json - provides version information for all packages installed into node modules by the npm client. 
+ 10. package.json file - configures npm package dependencies that are available to all the projects.
+ 11. readme file - contains introductory documentation for the root app.
+ 12. TS configapp.json - consists of all the application specific typescript configurations including angular and typescript template compiler options.
+ 13. tsconfig.json - consist of default typescript configuration for project in the workspace.
+ 14. tsconfig.spec.json file - consist of all the configuartion for typescript for application tests.
+ 15. tslint.json - this is an application specific T eslint configuration.
+    

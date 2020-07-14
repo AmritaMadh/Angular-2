@@ -1,0 +1,19 @@
+Module : 
+allow us to separate the functionality of our program into diffrent parts. These parts are independent of each other which means each modules outputs are completely separate form each other.
+In angular modules allow us to group together other building blocks such as components, directives, pipes and services.
+it also helps to minimize the code size by reuse.
+it requires optional import oly once. this is called lazy loading meaning we can load any NG Module only on use. 
+every angular application will have atleat one root module.
+
+Component 
+
+services:
+serices are a broad category  that encircles values, function or features that are required by an application. Service classes have a well defined purpose 
+
+Data Binding
+
+Directives
+
+Metadata
+
+Template

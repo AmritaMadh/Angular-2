@@ -3,3 +3,13 @@ tsc --version
 code example11.ts  - create ts file
 tsc example11.ts  - compile
 node example11.js  -  execute
+
+
+TypeScript is a programming language that was developed by microsoft and its a superset of javascript.
+with typescript angular programmimg model can be created using object-oriented programming model.
+TS is designed to developed large application. Hoevere it needs to be trans compiled to to JS as the browser understand JS only.
+
+  what if we upgrase all browsers to ts.
+  
+This conversion of javascript to typescript, transpilation. While using typscript we can use any javascript libraries. we can change javascript file to typescript file by changing the extensionof the file to .tt.
+Its not platform specific as can be used with any device, browser or OS.

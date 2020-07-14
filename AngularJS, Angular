@@ -56,5 +56,11 @@ Set Up
          this will terminate the process with 3680 id.
          
          
+How does Angular application works:
+The execution of angular application starts from angular.json file. This file is used to define all the starndards and path for angular project also it specifies which main.ts and index.htnl file has to be executed.
+Once main.ts file is detected, it is compiled. it contains the code that is required to bootstrap to start off the angular application.
+From main.ts file, angular moves to app module in app.module.ts file. this file contains all the componets that are required for angular application. 
+Then it moves to app.component.ts file, in app.component.ts file it specifies the selectors, template urlas wellas style url. All the components that are present in an angular application 
+are related to this root component. app-root is present in the index.html file.
   
     

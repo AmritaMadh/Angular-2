@@ -17,3 +17,6 @@ Directives
 Metadata
 
 Template
+
+
+The reason we use export in a component class is that we can import it anywhere in the project.

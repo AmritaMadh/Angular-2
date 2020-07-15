@@ -1,0 +1,11 @@
+1. Define Variable in Parent Componet:
+       testData: string = "Data from Parent";
+
+2. Import input
+       import { Component, OnInit, Input } from '@angular/core';
+       
+3. Declare variable with @input()
+       @Input() testDataChild: string;
+       
+4. Bind the Child Property in Parent Template file and assign the Parent variable data.
+       <app-child [testDataChild]='testData'></app-child>

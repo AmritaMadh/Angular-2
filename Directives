@@ -1,9 +1,6 @@
 Directive: 
 Angular Directives enhance the capability of HTML elements by attaching custom behaviors to the DOM.
 
-ElementRef:
-ElementRef which is responsible for accessing the DOM element.
-
 Types:
 - Attribute Directives
 - Structural Directives
@@ -26,3 +23,17 @@ Components are directives with templates. The only difference between Components
 have Templates. So, we can say that the Component is a cleaner version of the Directive with a template, which is easier to use.
 
 https://www.freecodecamp.org/news/angular-directives-learn-how-to-use-or-create-custom-directives-in-angular-c9b133c24442/
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ElementRef:
+ElementRef which is responsible for accessing the DOM element.
+The ElemementRef is a class which can wrap around a specified DOM element to enhance its properties and methods available on a native element.
+
+HostListener:
+The @HostListener decorator lets you subscribe to events of the DOM element that hosts an attribute directive, the <p> in this case.
+
+Of course you could reach into the DOM with standard JavaScript and attach event listeners manually. There are at least three problems with that approach:
+You have to write the listeners correctly.
+The code must detach the listener when the directive is destroyed to avoid memory leaks.
+Talking to DOM API directly isn't a best practice.
+

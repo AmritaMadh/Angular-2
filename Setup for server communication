@@ -1,0 +1,66 @@
+Setup for server communication:
+- need to import the Angular HttpClientModule. Most apps do so in the root AppModule.
+  inside app.module.ts 
+  import { HttpClientModule } from '@angular/common/http';
+ 
+- create a configService class which we will use for http requests
+  inject the HttpClient service as a dependency of an application class
+  constructor(private httpClient:HttpClient){}
+  This will instantiate the httpClient so we can use it to make the HTTP requests.
+  
+- The HttpClient service makes use of observables for all transactions. we must import the RxJS observable and operator symbols. 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Requesting data from a server:
+Use the HTTPClient.get() method to fetch data from a server. The asynchronous method sends an HTTP request, and returns an Observable that emits the requested data when the 
+response is received. The return type varies based on the observe and responseType values that you pass to the call.
+
+The get() method takes two arguments; the endpoint URL from which to fetch, and an options object that we can use to configure the request.
+
+The HTTP OPTIONS method is used to describe the communication options for the target resource. 
+
+options: {
+    headers?: HttpHeaders | {[header: string]: string | string[]},
+    observe?: 'body' | 'events' | 'response',
+    params?: HttpParams|{[param: string]: string | string[]},
+    reportProgress?: boolean,
+    responseType?: 'arraybuffer'|'blob'|'json'|'text',
+    withCredentials?: boolean,
+  }
+  
+Important options include the observe and responseType properties.
+  The observe option specifies how much of the response to return.
+  The responseType option specifies the format in which to return data.
+  --------------------------------------------------------------------------------
+  ng g s httpCrudDemo --skipTests=true
+  to skip test file.
+  JSONPlaceholder, which is a free API that can test our frontend applications.
+  --------------------------------------------------------------------------------
+  
+  examples:
+ 1. getConfig() {
+      return this.http.get<Config>(this.configUrl)
+        .pipe(
+          retry(3), // retry a failed request up to 3 times
+          catchError(this.handleError) // then handle the error
+        );
+      }
+ 
+  2. addHero (hero: Hero): Observable<Hero> {
+     return this.http.post<Hero>(this.heroesUrl, hero, httpOptions)
+     .pipe(
+            catchError(this.handleError('addHero', hero))
+          );
+      }
+
+  3. updateHero (hero: Hero): Observable<Hero> {
+     return this.http.put<Hero>(this.heroesUrl, hero, httpOptions)
+      .pipe(
+        catchError(this.handleError('updateHero', hero))
+      );
+    } 
+
+  
+  References:
+  -----------
+  https://www.pluralsight.com/guides/posting-deleting-putting-data-angular

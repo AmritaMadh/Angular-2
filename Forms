@@ -31,3 +31,8 @@ In template-driven forms, the form model is implicit, rather than explicit. The 
 2. define the variable
    favoriteColor = '';
    
+   
+References:
+-----------
+https://angular.io/guide/forms-overview
+   

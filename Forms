@@ -8,3 +8,26 @@ testable. If forms are a key part of your application, or you're already using r
 Template-driven forms rely on directives in the template to create and manipulate the underlying object model. They are useful for adding a simple form to an app, such as an email 
 list signup form. They're easy to add to an app, but they don't scale as well as reactive forms. If you have very basic form requirements and logic that can be managed solely in
 the template, template-driven forms could be a good fit.
+
+
+Common form foundation classes
+Both reactive and template-driven forms are built on the following base classes.
+FormControl tracks the value and validation status of an individual form control.
+FormGroup tracks the same values and status for a collection of form controls.
+FormArray tracks the same values and status for an array of form controls.
+ControlValueAccessor creates a bridge between Angular FormControl instances and native DOM elements.
+
+Setup in reactive forms:
+1. port { FormControl } from '@angular/forms';
+2. create object of FormControl
+   favoriteColorControl = new FormControl('');
+3. bind FormControl
+   Favorite Color: <input type="text" [formControl]="favoriteColorControl">
+   
+Setup in template-driven forms:
+In template-driven forms, the form model is implicit, rather than explicit. The directive NgModel creates and manages a FormControl instance for a given form element.
+1. bind using [(ngModel)]
+   Favorite Color: <input type="text" [(ngModel)]="favoriteColor">
+2. define the variable
+   favoriteColor = '';
+   

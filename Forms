@@ -18,10 +18,11 @@ FormArray tracks the same values and status for an array of form controls.
 ControlValueAccessor creates a bridge between Angular FormControl instances and native DOM elements.
 
 Setup in reactive forms:
-1. port { FormControl } from '@angular/forms';
-2. create object of FormControl
+1. Register the reactive forms module in your app. This module declares the reactive-form directives that you need to use reactive forms.
+2. port { FormControl } from '@angular/forms';
+3. create object of FormControl
    favoriteColorControl = new FormControl('');
-3. bind FormControl
+4. bind FormControl / Register the FormControl in the template.
    Favorite Color: <input type="text" [formControl]="favoriteColorControl">
    
 Setup in template-driven forms:

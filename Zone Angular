@@ -1,0 +1,19 @@
+fps : frames per sceond
+Frame rate is the frequency at which consecutive images called frames appears on a display
+
+ngZone:
+
+Zone.js is used to detect when certain async operations occur to trigger a change detection cycle. 
+Zone.js is an execution context that helps developers intercept and keep tracks of async operations.
+Zone works with the concept of associating each operations with a zone. 
+Each zone can fork(divide) and create child zone with diffrent context, no limits.
+Inside a zone, async operations are captured using different APIs, so that the developer can decide what to do with the interceptions.
+
+
+
+  SetTimeOut, SetInterval, Click, Addeventlist tener, xmlhttp request, keyUp, keyDown
+Angular has its own way to handle Change Detection by using ngZone at its call. Compiler takes care of everything.
+
+References:
+-----------
+https://blog.bitsrc.io/how-angular-uses-ngzone-zone-js-for-dirty-checking-faa12f98cd49

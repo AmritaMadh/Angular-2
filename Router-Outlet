@@ -1,0 +1,40 @@
+- Router-Outlet is a placeholder used to load component dynamically based on activated component or current route state.
+
+- <base href>
+   This guide works with a CLI-generated Angular app. If you are working manually, make sure that you have <base href="/"> in the <head> of your index.html file. 
+
+- This assumes that the app folder is the application root, and uses "/".
+
+Steps:
+1. Import component in AppRoutingModule
+2. Import the AppRoutingModule into AppModule and add it to the imports array.
+3. Import RouterModule and Routes into your routing module.
+4. Define routes in Routes array.
+5. Add routes to the application.
+
+- The order of routes is important because the Router uses a first-match wins strategy when matching routes.
+- wildcard routes:
+  { path: '**', component:  }
+  The two asterisks, **, indicate to Angular that this routes definition is a wildcard route. A wildcard route is the last route because it matches any URL. 
+  
+- Child Routes
+  const routes: Routes = [
+  { path: 'first-component',
+    component: FirstComponent, // this is the component with the <router-outlet> in the template
+    children: [
+      {
+        path: 'child-a', // child route path
+        component: ChildAComponent // child route component that the router renders
+      },
+      {
+        path: 'child-b',
+        component: ChildBComponent // another child route component that the router renders
+      }
+    ] },
+    
+ - Route Guard
+   prevent unauthorized access
+   
+   References:
+   ----------
+   https://angular.io/guide/router
